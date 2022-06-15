@@ -1,0 +1,73 @@
+
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Typeform – Lead generator
+{% endblock %}
+
+
+{% block header %}
+
+  {% include "includes/TF-header-start-links.html" %}  
+
+{% endblock %}
+
+
+
+{% block content %}
+
+<style type="text/css">
+  body {background: transparent !important;}
+</style>
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+
+
+
+      <h1 class="govuk-heading-xl">
+        There's a better way to ask
+      </h1>
+
+      <p class="govuk-body-l">
+        You don't want to make a boring form. And your audience won't answer one.
+        Create a typeform instead—and make everyone happy.
+      </p>
+
+
+      <a href="/start" role="button" draggable="false" class="govuk-button"  data-module="govuk-button">
+        Build a form
+      </a>
+
+      <a href="/start" role="button" draggable="false" class="govuk-button govuk-!-margin-bottom-8"  data-module="govuk-button">
+        Set-up lead generation
+      </a>
+
+
+
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-half">
+
+<video width="100%" autoplay muted loop style="position: absolute;top: 15%;left: 0;z-index: -1000;">
+  <source src="/public/images/v/video-mobile.mp4" type="video/mp4">
+</video>
+
+<!--
+video-1024-below.mp4
+video-mobile.mp4
+-->
+
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block footer %}
+
+  <!-- include "includes/TF-footer.html" -->
+
+{% endblock %}
+

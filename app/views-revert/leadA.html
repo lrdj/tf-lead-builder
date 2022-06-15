@@ -1,0 +1,61 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Typeform – Lead generator
+{% endblock %}
+
+{% block header %}
+  {% include "includes/TF-header-links.html" %}  
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <span class="govuk-caption-l">Initiate a nurture workflow</span>
+      <h1 class="govuk-fieldset__heading">
+        Confirm the structure of your lead-gen workflow
+      </h1>
+    </legend>
+
+<p>Simple lead capture flow with four steps and two nurture emails.</p>
+
+<p><img src="/public/images/simple-flow.png" style="width: 99%;"></p>
+
+  </fieldset>
+</div>
+
+<button onclick="location.href='/leads'" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Create a different flow
+</button>
+
+<button onclick="location.href='/leadB'" class="govuk-button" data-module="govuk-button">
+  Build this flow
+</button>
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+
+{% include "includes/workflow-submenu.html" %}  
+
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block footer %}
+
+  {% include "includes/TF-footer.html" %}
+
+{% endblock %}
+

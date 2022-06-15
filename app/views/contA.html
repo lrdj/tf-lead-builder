@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Typeform – Lead generator
+{% endblock %}
+
+{% block header %}
+  {% include "includes/TF-header-links.html" %}  
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <span class="govuk-caption-l">Create interactive content</span>
+      <h1 class="govuk-fieldset__heading">
+        What information do you need to ask for on your lead generation form?
+      </h1>
+    </legend>
+
+    <h2 class="govuk-heading-m">Check all the items that apply.</h2>
+
+    <div class="govuk-checkboxes govuk-checkboxes" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          First name
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+          Last name
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+          Email address
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+<details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      More type of needed information
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+  <p>Click to add the type of questions you need:</p>
+  <a href="#c1">Work phone</a>; <a href="#c2">Home address</a>; <a href="#c3">Airline</a>; <a href="#c4">Nationality</a>; <a href="#c5">Arrival date</a>; <a href="#c6">Departure date</a>; <a href="#c7">Availability dates</a>; <a href="#c7">More...</a>;
+  </div>
+</details>
+
+<button onclick="location.href='/contB'" class="govuk-button" data-module="govuk-button">
+  Save questions and add styling
+</button>
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+
+{% include "includes/workflow-submenu.html" %}  
+
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block footer %}
+
+  {% include "includes/TF-footer.html" %}
+
+{% endblock %}
+

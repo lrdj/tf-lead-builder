@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Typeform – Lead generator
+{% endblock %}
+
+{% block header %}
+  {% include "includes/TF-header-links.html" %}  
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <span class="govuk-caption-l">Initiate a nurture workflow</span>
+      <h1 class="govuk-fieldset__heading">
+        Configure the first email in your flow.
+      </h1>
+    </legend>
+
+    <h2 class="govuk-heading-m">Step B: Download email</h2>
+
+    <p>
+    This is the email that is sent to a respondent when they have successfully completed your Typeform. It contains a link to your e-book.</p>
+
+    <p><img src="/public/images/naiara-B.png" style="width: 90%;"></p>
+
+  </fieldset>
+</div>
+
+
+
+<button onclick="location.href='#'" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Send a test email
+</button>
+
+<button onclick="location.href='/leadC'" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+
+{% include "includes/workflow-submenu.html" %}  
+
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block footer %}
+
+  {% include "includes/TF-footer.html" %}
+
+{% endblock %}
+

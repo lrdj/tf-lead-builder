@@ -1,0 +1,101 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Typeform – Lead generator
+{% endblock %}
+
+{% block header %}
+  {% include "includes/TF-header-links.html" %}  
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">
+        Define my audience
+      </h1>
+
+      <p>
+        Please tell us about your plans for audience management.</p>
+
+
+choices
+
+I have already setup a traffic-building mechanism (earned, organic, PPC, etc.) and know what page(s) those visitors are landing on.
+- I will need a link to new my lead-generating content
+- I will embed my new lead-generating content in one of my existing pages
+
+I'm not sure how I will generate traffic to my new lead gen content
+- I haven't decided how to show my new content to potential leads
+- 
+
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+      <h1 class="govuk-fieldset__heading">
+        How will potential leads get to your new content?
+      </h1>
+    </legend>
+    <div class="govuk-radios govuk-radios--small" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          I have already setup a traffic-building mechanism (earned, organic, PPC, etc.) and know what page(s) those visitors are landing on.
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+          I'm not sure how I will generate traffic to my new lead gen content
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+          Wales
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+          Northern Ireland
+        </label>
+      </div>
+      <div class="govuk-radios__divider">or</div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-6" name="where-do-you-live" type="radio" value="abroad">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-6">
+          I am a British citizen living abroad
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+
+{% include "includes/workflow-submenu.html" %}  
+
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block footer %}
+
+  {% include "includes/TF-footer.html" %}
+
+{% endblock %}
+

@@ -1,0 +1,135 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Typeform – Lead generator
+{% endblock %}
+
+{% block header %}
+  {% include "includes/TF-header-links.html" %}  
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <span class="govuk-caption-l">Initiate a nurture workflow</span>
+      <h1 class="govuk-fieldset__heading">
+        Configure the "thank you" email
+      </h1>
+    </legend>
+
+    <h2 class="govuk-heading-m">Step D: Thank you email</h2>
+    
+    <p>
+    This is the email that is sent to a respondent when they have successfully downloaded your e-book via either the "download" or "reminder" emails.</p>
+
+
+    <div class="govuk-radios govuk-radios--inline govuk-radios--small" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes" checked="checked">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Activate
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          Disable
+        </label>
+      </div>
+    </div>
+
+
+<p><img src="/public/images/naiara-D.png" style="width: 90%;"></p>
+
+
+
+
+
+Email content
+
+
+Subject
+
+[ Thanks! ]
+
+How your email will appear in people's inbox. Keep it short and sweet.
+
+
+Headline
+
+[ ]
+
+Your chance to grab attention. Emphasize the value people will get from your e-book.
+
+
+Body
+
+[Hope you liked it!]
+
+Briefly summarise the contents of your e-book and encourage people to hit the download button.
+
+
+
+Email footer
+
+
+Headline (Optional)
+
+[ ]
+
+The title for the small section at the bottom of your email.
+
+
+Body (Optional)
+
+[ ]
+
+Secondary information like contact details and privacy policy.
+
+
+
+
+
+
+
+
+
+  </fieldset>
+</div>
+
+
+<button onclick="location.href='#'" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Send a test email
+</button>
+
+<button onclick="location.href='/check'" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+
+{% include "includes/workflow-submenu.html" %}  
+
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block footer %}
+
+  {% include "includes/TF-footer.html" %}
+
+{% endblock %}
+

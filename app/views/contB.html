@@ -1,0 +1,104 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Typeform – Lead generator
+{% endblock %}
+
+{% block header %}
+  {% include "includes/TF-header-links.html" %}  
+{% endblock %}
+
+
+{% block content %}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+
+      <span class="govuk-caption-l">Create interactive content</span>
+      <h1 class="govuk-heading-xl">
+        How would you like your form to look?
+      </h1>
+
+
+<style type="text/css">
+  
+  .templateIcons img { width: 26%;padding: 0;margin: 0;}
+  .templateIcons a { padding:34px 5px 0 5px;}
+
+</style>
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Define colours, fonts, and sizes</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Source</th>
+      <th scope="col" class="govuk-table__header">Styling element</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Pull CSS from website:</th>
+      <td class="govuk-table__cell">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="event-name">
+            What is URL of the website?
+          </label>
+          <input class="govuk-input" id="event-name" name="event-name" type="text">
+        </div>
+      </td>
+    </tr>
+    <tr class="govuk-table__row templateIcons">
+      <th scope="row" class="govuk-table__header">"Light touch"</th>
+      <td class="govuk-table__cell">
+        <a href="#t1"><img src="/public/images/t1.png"></a>
+        <a href="#t2"><img src="/public/images/t2.png"></a>
+        <a href="#t3"><img src="/public/images/t3.png"></a>
+      </td>
+    </tr>
+    <tr class="govuk-table__row templateIcons">
+      <th scope="row" class="govuk-table__header">"Friendly business"</th>
+      <td class="govuk-table__cell">
+        <a href="#t4"><img src="/public/images/t4.png"></a>
+        <a href="#t5"><img src="/public/images/t5.png"></a>
+        <a href="#t6"><img src="/public/images/t6.png"></a>
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<!--
+button onclick="location.href='/thinking'" class="govuk-button" data-module="govuk-button">
+  Save my form and continue
+</button
+-->
+
+<form action="/thinking" method="post" class="form">
+
+  <input name="loader-delay" value="1000" type="hidden">
+
+  <button class="govuk-button" data-module="govuk-button">Save my form and continue</button>
+
+</form>
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+
+{% include "includes/workflow-submenu.html" %}  
+
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block footer %}
+
+  {% include "includes/TF-footer.html" %}
+
+{% endblock %}
+

@@ -1,0 +1,98 @@
+// global styles for <a> and <p> tags
+$govuk-global-styles: true;
+$govuk-new-link-styles: true;
+
+// We can't mount GOV.UK Frontend's assets at root as it's done automatically by the extensions framework.
+$govuk-assets-path: '/govuk/assets/';
+
+// Import GOV.UK Frontend and any extension styles if extensions have been configured
+@import "lib/extensions/extensions";
+
+// Patterns that aren't in Frontend
+@import "patterns/step-by-step-header";
+@import "patterns/step-by-step-nav";
+@import "patterns/step-by-step-related";
+@import "patterns/task-list";
+@import "patterns/related-items";
+
+// Add extra styles here, or re-organise the Sass files in whichever way makes most sense to you
+
+
+// background colour etc
+// lighter BG tint rgb(246, 246, 241);
+// darker BG tint rgb(241, 236, 228);
+
+body.govuk-template__body { 
+    background:rgb(246, 246, 241);
+    }
+
+// Logo position
+
+.govuk-header__logo {
+    margin-bottom: 10px;
+    padding-right: 50px;
+    padding-top: 17px;
+    }
+
+// Header colours
+
+.govuk-header__container {
+//  border-bottom: 10px solid red;
+    border-bottom: none;
+    }
+
+.govuk-header {
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.1428571429;
+//  border-bottom: 10px solid red;
+    border-bottom: none;
+    color: #666;
+    background: #fff;
+    }
+
+.govuk-header__link:link, .govuk-header__link:visited {
+    color: #333;
+    }
+
+// Buttons
+
+
+.govuk-button {
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1.25rem;
+    line-height: 1.1875;
+    margin-top: 0;
+    margin-right: 0;
+    margin-left: 0;
+    margin-bottom: 22px;
+    padding: 11px 16px 10px;
+    border-radius: 3px;
+    color: #ffffff;
+    background-color: #333;
+    box-shadow: 0 2px 0 #333;
+    }
+
+.govuk-button:visited,
+.govuk-button:hover,
+.govuk-button:active {
+    background-color: #333;
+    }
+
+.govuk-button--secondary {
+    color: #333;
+    font-weight: 400;
+    background-color: #ddd;
+    box-shadow: 0 2px 0 #ddd;
+    }
+
+
+
+
+
+
+
+
+

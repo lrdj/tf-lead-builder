@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Typeform – Lead generator
+{% endblock %}
+
+{% block header %}
+  {% include "includes/TF-header-links.html" %}  
+{% endblock %}
+
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--xl">
+      <span class="govuk-caption-l">Initiate a nurture workflow</span>
+      <h1 class="govuk-fieldset__heading">
+        Configure the first email in your flow
+      </h1>
+    </legend>
+  </fieldset>
+
+    <h2 class="govuk-heading-m">Step B: Download email</h2>
+
+    <p>
+    This is the email that is sent to a respondent when they have successfully completed your Typeform. It contains a link to your e-book.</p>
+
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <h2 class="govuk-fieldset__heading">
+      Email content elements
+    </h2>
+  </legend>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+        Subject
+      </label>
+    <div id="event-name-hint" class="govuk-hint">
+      How your email will appear in people's inbox. Keep it short and sweet.
+    </div>
+    <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint" value="The download you requested is ready">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-2">
+      Headline
+    </label>
+    <div id="event-name-hint" class="govuk-hint">
+      Your chance to grab attention. Emphasize the value people will get from your e-book.
+    </div>
+    <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint" value="Read this book and get rich!">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-town">
+      Body
+    </label>
+    <div id="more-detail-hint" class="govuk-hint">
+      Briefly summarize the contents of your e-book and encourage people to hit the download button.
+    </div>
+    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint">If you forget to download and read this ebook, you're a bad dad, and not in a cool way, ok?</textarea>
+  </div>
+</fieldset>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <h2 class="govuk-fieldset__heading">
+      Call to action
+    </h2>
+  </legend>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-1">
+      Label
+    </label>
+    <div id="more-detail-hint" class="govuk-hint">
+      The button people click to download your e-book. Make the label as specific as you can.
+    </div>
+    <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1" value="Save my book to my computer now!">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="file-upload-1">
+      Provide a link to download content
+    </label>
+    <input class="govuk-input" id="address-line-1" name="address-line-1" type="text" autocomplete="address-line1" value="https://www.yumpu.com/en/document/read/65868228/full-book-pdf-download-how-to-not-suck-at-life-89-tips-for-teens-by-connor-boyack">
+    <div id="more-detail-hint" class="govuk-hint">
+      Or, upload your e-book file here. <br>We recommend PDF format. <br>If the file is password protected, remember to include the password in the email body.
+    </div>
+    <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+  </div>
+</fieldset>
+
+<hr class="govuk-section-break govuk-section-break--m govuk-section-break">
+
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+    <h2 class="govuk-fieldset__heading">
+      Email footer
+    </h2>
+  </legend>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="event-name">
+      Headline (Optional)
+    </label>
+    <div id="event-name-hint" class="govuk-hint">
+      The title for the small section at the bottom of your email.
+    </div>
+    <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint" value="No, go back up and click on the download button.">
+  </div>
+
+  <div class="govuk-form-group">
+    <label class="govuk-label" for="address-line-2">
+      Body (Optional)
+    </label>
+    <div id="event-name-hint" class="govuk-hint">
+      Secondary information like contact details and privacy policy.
+    </div>
+    <input class="govuk-input" id="event-name" name="event-name" type="text" aria-describedby="event-name-hint" value="What, the button isn't big enough? Start clicking now!">
+  </div>
+</fieldset>
+
+
+
+<button onclick="location.href='#'" class="govuk-button govuk-button--secondary" data-module="govuk-button">
+  Send a test email
+</button>
+
+<button onclick="location.href='/leadC'" class="govuk-button" data-module="govuk-button">
+  Continue
+</button>
+
+
+    </div>
+
+    <div class="govuk-grid-column-one-third">
+
+      <aside class="app-related-items" role="complementary">
+
+{% include "includes/workflow-submenu.html" %}  
+
+      </aside>
+
+    </div>
+  </div>
+{% endblock %}
+
+
+{% block footer %}
+
+  {% include "includes/TF-footer.html" %}
+
+{% endblock %}
+
